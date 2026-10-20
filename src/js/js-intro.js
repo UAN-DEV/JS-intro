@@ -5,7 +5,7 @@ console.log("Snippet");
 
 /* 
 Многорядочный
- комментарь
+ комментарий
 */
 
 // Переменные
@@ -56,8 +56,13 @@ console.log("null :>> ", null1);
 // const sum1 = String(a1 + a2);
 
 // console.log("sum :>> ", sum1);
-
 const op1 = Number(prompt("Введите первое число:"));
 const op2 = +prompt("Введите второе число:");
 const sum2 = op1 + op2;
+
 console.log("sum2 :>> ", sum2.toFixed(4));
+
+
+prompt("Введите первое число:") // запрос на ввод данных
+alert('Hello!!!') // вывод сообщения
+confirm('Ok or Cancel')  // запрос подтверждения
