@@ -1,6 +1,6 @@
 "use strict";
 
-let a = new Date(0) + 0
+let a = null == ''
 
 // true + false
 // 12 / "6"
@@ -20,5 +20,16 @@ let a = new Date(0) + 0
 // new Date(0) - 0
 // new Date(0) + 0
 
-
 console.log("a :>> ", a);
+
+// let creature = "";
+
+// switch (creature) {
+//   case "cat":
+//   case "dog":
+//   case "cow":
+//     console.log("It is a animals");
+//     break;
+//   default:
+//     console.log("Empty");
+// }
