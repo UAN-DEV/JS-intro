@@ -118,7 +118,7 @@ alert(result) */
 
 // SRP Single Responsibility Principle
 // Bad:
-const showSmth = (str) => {
+/* const showSmth = (str) => {
   console.log(`${str} smth`);
   return `${str} smth`;
 };
@@ -128,4 +128,11 @@ console.log(showSmth("Stiga"));
 const showSmth1 = (str) => {
   return `${str} smth`;
 };
-console.log(showSmth1("Stiga"));
+console.log(showSmth1("Stiga")); */
+
+// Arrow function
+
+const arrFunction = (par) => par * 2;
+
+console.log('arrFunction(4) :>> ', arrFunction(4));
+
