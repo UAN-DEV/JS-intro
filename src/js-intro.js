@@ -62,7 +62,12 @@ const sum2 = op1 + op2;
 
 console.log("sum2 :>> ", sum2.toFixed(4));
 
+prompt("Введите первое число:"); // запрос на ввод данных
+alert("Hello!!!"); // вывод сообщения
+confirm("Ok or Cancel"); // запрос подтверждения
 
-prompt("Введите первое число:") // запрос на ввод данных
-alert('Hello!!!') // вывод сообщения
-confirm('Ok or Cancel')  // запрос подтверждения
+const num = Number(prompt("Enter number", 1001));
+Number.isFinite(num)
+  ? console.log(num, "- is a number")
+  : console.log("Is not a number!");
+
