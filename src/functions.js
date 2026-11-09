@@ -134,5 +134,5 @@ console.log(showSmth1("Stiga")); */
 
 const arrFunction = (par) => par * 2;
 
-console.log('arrFunction(4) :>> ', arrFunction(4));
+console.log("arrFunction(4) :>> ", arrFunction(4));
 
