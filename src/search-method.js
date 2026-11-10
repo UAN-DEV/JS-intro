@@ -102,3 +102,72 @@ function myMap(arr, callback, thisArg) {
 }
 
 console.log(myMap(strIntArr, parseToInt));
+
+// Own implementation some and every
+const arr3 = [2, 5, 9, 12, 18];
+const arr4 = [2, 6, 8, 12, 18];
+
+console.log(arr3.some((el) => el % 2 !== 0));
+console.log([].some((el) => el % 2 !== 0));
+
+console.log(arr3.every((el) => el % 2 === 0));
+console.log(arr4.every((el) => el % 2 === 0));
+console.log([].every((el) => el % 2 === 0));
+
+function mySome(arr, callback, thisArg) {
+  for (let i = 0; i < arr.length; i++)
+    if (callback.call(thisArg, arr[i], i, arr)) return true;
+  return false;
+}
+
+console.log(mySome(arr3, (el) => el % 2 !== 0));
+console.log(mySome([], (el) => el % 2 !== 0));
+
+function myEvery(arr, callback, thisArg) {
+  for (let i = 0; i < arr.length; i++)
+    if (!callback.call(thisArg, arr[i], i, arr)) return false;
+  return true;
+}
+console.log(myEvery(arr3, (el) => el % 2 === 0));
+console.log(myEvery(arr4, (el) => el % 2 === 0));
+console.log(myEvery([], (el) => el % 2 === 0));
+
+// reduce() and reduceRight
+
+const emptyArr = [];
+
+console.log(emptyArr.reduce((a, b) => a + b, 100));
+
+const friends = [
+  { name: "Ann", books: ["HP", "Phyton"], age: 20 },
+  { name: "Jhon", books: ["JS", "Hibernate"], age: 25 },
+  { name: "Bill", books: ["Java", "SQL"], age: 30 },
+];
+
+const allBooks = friends.reduce((prev, curr) => [...prev, ...curr.books], []);
+console.log(allBooks);
+
+// Own realisation reduce
+
+const myReduce = (arr, callback, startValue) => {
+  let result;
+  if (startValue) {
+    result = startValue;
+    for (let i = 0; i < arr.length; i++) {
+      result = callback(result, arr[i], i, arr);
+    }
+  } else {
+    result = arr[0];
+    for (let i = 0; i < arr.length - 1; i++) {
+      result = callback(result, arr[i+1], i, arr);
+    }
+  }
+  return result
+};
+
+const arrArrs = [
+  [1,2],
+  [3,4],
+  [5,6],
+]
+console.log(myReduce(arrArrs, (a,b)=>a.concat(b)))
