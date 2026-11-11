@@ -74,4 +74,36 @@ const myArr1 = [2, 7, 90];
 const myArray2 = myArray.concat(1, 3, true, myArr1, myArray1);
 console.log(myArray2);
 console.log(myArray2.reverse());
-// console.log(myArray.reverse());
+console.log(myArray.reverse());
+console.log(new MyArray().reverse());
+
+const user = {
+  name: "Vasyl",
+  age: 44,
+  books: ["H;lkjf", "Ojlkakjdf",'Yoiuh'],
+  eny: {
+    wei: 20,
+    height: 14,
+  },
+};
+
+function logger({
+  name = "Ivan",
+  age = 34,
+  books: [first,, last] = ["JavaScript",'C++', "Java"],
+  eny: { wei: weight = 250, height = 144 } = {},
+} = {}) {
+  // const {name, age, books:[js, j],eny:{weight,height}}=user
+
+  console.log("name :>> ", name);
+  console.log("age :>> ", age);
+  // console.log("books :>> ", books);
+  console.log("first :>> ", first);
+  console.log("last :>> ",last);
+  // console.log("eny :>> ", eny);
+  console.log("weight :>> ", weight);
+  console.log("height :>> ", height);
+}
+
+logger(user);
+logger();
