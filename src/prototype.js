@@ -46,26 +46,26 @@
 
 // console.log(sonya)
 
-function Country(title = "Ukrain", capital = "Kiev") {
-  this.title = title;
-  this.capital = capital;
-  // this.getInfo = function () {
-  //   return `Capital is ${this.capital}`;
-  // };
-}
+// function Country(title = "Ukrain", capital = "Kiev") {
+//   this.title = title;
+//   this.capital = capital;
+//   // this.getInfo = function () {
+//   //   return `Capital is ${this.capital}`;
+//   // };
+// }
 
-Country.prototype.getInfo = function () {
-    return `Capital is ${this.capital}`;
-  };
-const ukreine = new Country();
-const usa = new Country("USA", "Washington");
+// Country.prototype.getInfo = function () {
+//     return `Capital is ${this.capital}`;
+//   };
+// const ukreine = new Country();
+// const usa = new Country("USA", "Washington");
 
-console.log(ukreine.getInfo());
-console.log(usa.getInfo());
+// console.log(ukreine.getInfo());
+// console.log(usa.getInfo());
 
-console.log(ukreine.getInfo === usa.getInfo)
+// console.log(ukreine.getInfo === usa.getInfo)
 
-console.log(ukreine)
+// console.log(ukreine)
 
-console.log(usa instanceof Array)
-console.log(usa instanceof Country)
+// console.log(usa instanceof Array)
+// console.log(usa instanceof Country)
