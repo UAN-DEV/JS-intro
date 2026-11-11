@@ -60,11 +60,12 @@ function MyArrayProto() {
   };
   this.reverse = function () {
     for (let i = 0; i < this.length / 2; i++) {
-      const temp = this[i];
-      this[i] = this[this.length - 1 - i];
-      this[this.length - 1 - i] = temp;
-      }
-    return this
+      [this[i], this[this.length - 1 - i]] = [
+        this[this.length - 1 - i],
+        this[i],
+      ];
+    }
+    return this;
   };
 }
 const myArray = new MyArray(10);
@@ -72,4 +73,5 @@ const myArray1 = new MyArray(100, 500, 900, 1000);
 const myArr1 = [2, 7, 90];
 const myArray2 = myArray.concat(1, 3, true, myArr1, myArray1);
 console.log(myArray2);
-console.log(myArray.reverse());
+console.log(myArray2.reverse());
+// console.log(myArray.reverse());
